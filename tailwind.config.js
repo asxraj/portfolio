@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -14,11 +15,13 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        hyperion: ["hyperion"],
+        hyperionBold: ["hyperion-bold"],
       },
     },
     screens: {
       xs: "480px",
-      sm: "640x",
+      sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
