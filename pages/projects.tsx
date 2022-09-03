@@ -5,9 +5,10 @@ import { projects as projectData } from "../utils/data";
 import ProjectCard from "../components/ProjectCard";
 
 import { motion } from "framer-motion";
+import { fadeInUp, stagger } from "../utils/animations";
 
-const projects = () => {
-  const [projects, setProjects] = useState(projectData);
+const Projects = () => {
+  const [projects, setProjects] = useState<IProject[]>(projectData);
   const [active, setActive] = useState<string>("all");
 
   const handleFilterCategory = (category: Category | "all") => {
@@ -30,18 +31,24 @@ const projects = () => {
         active={active}
         handleFilterCategory={handleFilterCategory}
       />
-      <div className="grid grid-cols-12 mt-5 gap-6">
+      <motion.div
+        variants={stagger}
+        initial="initial"
+        animate="animate"
+        className="grid grid-cols-12 mt-5 gap-6"
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
+            variants={fadeInUp}
             key={index}
             className="col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-10"
           >
             <ProjectCard {...project} />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export default projects;
+export default Projects;

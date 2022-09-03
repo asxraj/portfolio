@@ -7,6 +7,7 @@ const ProjectCard = (props: IProject) => {
     <div className="flex flex-col rounded-lg overflow-hidden shadow-2xl">
       <Image
         src={props.image_path}
+        alt={props.name}
         width="300"
         height="150"
         className="cursor-pointer"

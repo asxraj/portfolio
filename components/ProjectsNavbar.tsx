@@ -11,14 +11,16 @@ const NavItem = ({
   handleFilterCategory: Function;
   active: string;
 }) => {
+  console.log(value);
+
   return (
     <li
-      className={`f sm:px-7 px-0 sm:py-3 py-0 rounded-full cursor-pointer transition-all duration-300 whitespace-nowrap ${
+      onClick={() => handleFilterCategory(value)}
+      className={`sm:px-7 px-0 sm:py-3 py-0 rounded-full cursor-pointer transition-all duration-300 whitespace-nowrap ${
         value === active
           ? "sm:bg-green-500 text-green-500 sm:text-inherit  "
           : ""
       }`}
-      onClick={() => handleFilterCategory(value)}
     >
       {value}
     </li>
