@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="font-poppins bg-gray-200 dark:bg-slate-800 dark:text-white">
+      <body className="font-hyperionBold bg-gray-200 dark:bg-slate-800 dark:text-white">
         <Main />
         <NextScript />
       </body>

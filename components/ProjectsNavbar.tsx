@@ -1,5 +1,6 @@
 import React from "react";
 import { Category } from "../utils/types";
+import { categoryLinks } from "../utils/data";
 
 const NavItem = ({
   value,
@@ -12,8 +13,10 @@ const NavItem = ({
 }) => {
   return (
     <li
-      className={`px-10 py-4 outline-none rounded-full cursor-pointer transition-all ${
-        value === active ? "bg-green-500" : ""
+      className={`f sm:px-7 px-0 sm:py-3 py-0 rounded-full cursor-pointer transition-all duration-300 whitespace-nowrap ${
+        value === active
+          ? "sm:bg-green-500 text-green-500 sm:text-inherit  "
+          : ""
       }`}
       onClick={() => handleFilterCategory(value)}
     >
@@ -30,32 +33,15 @@ const ProjectsNavbar = ({
   active: string;
 }) => {
   return (
-    <nav className="flex list-none gap-10 capitalize mt-10">
-      <NavItem
-        active={active}
-        handleFilterCategory={handleFilterCategory}
-        value="all"
-      />
-      <NavItem
-        active={active}
-        handleFilterCategory={handleFilterCategory}
-        value="react"
-      />
-      <NavItem
-        active={active}
-        handleFilterCategory={handleFilterCategory}
-        value="mongo"
-      />
-      <NavItem
-        active={active}
-        handleFilterCategory={handleFilterCategory}
-        value="django"
-      />
-      <NavItem
-        active={active}
-        handleFilterCategory={handleFilterCategory}
-        value="node"
-      />
+    <nav className="flex list-none sm:gap-1 lg:gap-12 gap-5 sm:text-normal md:text-lg text-sm capitalize mt-10 ">
+      {categoryLinks.map((category, index) => (
+        <NavItem
+          key={index}
+          active={active}
+          handleFilterCategory={handleFilterCategory}
+          value={category}
+        />
+      ))}
     </nav>
   );
 };
