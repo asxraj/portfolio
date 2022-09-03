@@ -14,7 +14,10 @@ const ProjectCard = (props: IProject) => {
         </p>
         <div className="flex flex-wrap gap-2 h-16">
           {props.key_techs.map((tech) => (
-            <p className="text-xs md:text-sm bg-blue h-fit px-3 py-[1px] rounded-md">
+            <p
+              key={tech}
+              className="text-xs md:text-sm bg-blue h-fit px-3 py-[1px] rounded-md"
+            >
               {tech}
             </p>
           ))}
