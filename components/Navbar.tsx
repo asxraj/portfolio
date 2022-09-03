@@ -24,7 +24,7 @@ const DarkModeToggle = ({
         </button>
       ) : (
         <button onClick={() => onClick("dark")}>
-          <MdDarkMode className=" w-6 h-6 text-slate-800 " />
+          <MdDarkMode className=" w-6 h-6 text-indigo-500 " />
         </button>
       )}
     </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="sm:hidden flex flex-row-reverse gap-4 items-center cursor-pointer">
+      <div className="sm:hidden flex flex-row-reverse gap-4 items-center">
         <div className="w-7 h-7" onClick={() => setToggle((prev) => !prev)}>
           {toggle ? (
             <AiOutlineClose className="w-6 h-6" />

@@ -54,7 +54,7 @@ const Bar = ({ data }: { data: ISkill }) => {
 
 const Resume = () => {
   return (
-    <div className="flex flex-col justify-center p-12">
+    <div className="flex flex-col justify-center sm:p-12 p-6">
       <div className="flex-col xl:flex-row flex justify-start gap-6 ">
         <div className="font-poppins flex flex-col text-2xl flex-1 space-y-4">
           <h1 className="font-hyperionBold">Education</h1>
