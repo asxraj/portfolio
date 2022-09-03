@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="md:hidden flex flex-row-reverse gap-4 items-center cursor-pointer">
+      <div className="sm:hidden flex flex-row-reverse gap-4 items-center cursor-pointer">
         <div className="w-7 h-7" onClick={() => setToggle((prev) => !prev)}>
           {toggle ? (
             <AiOutlineClose className="w-6 h-6" />
@@ -61,14 +61,14 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } flex-col bg-gray-300 p-6 rounded-xl absolute top-20 right-0 mx-6 min-w-[140px] sidebar dark:bg-gray-500`}
+          } flex-col bg-gray-300 p-6 z-50 rounded-xl bg-opacity-70 absolute top-20 right-0 mx-6 min-w-[140px] sidebar dark:bg-gray-500 dark:bg-opacity-50`}
         >
           <ul className="">
             {navLinks.map((link, index) => (
               <li
                 key={link.name}
-                className={`cursor-pointer font-hyperionBold text-sm transition-all hover:text-green-500 list-none ${
-                  pathname === link.route ? "text-green-500" : ""
+                className={`cursor-pointer font-hyperionBold text-sm transition-all hover:text-blue list-none ${
+                  pathname === link.route ? "text-[#119EF4]" : ""
                 } mb-4 }`}
                 onClick={() => setToggle((prev) => !prev)}
               >
@@ -77,17 +77,17 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex ">
+        <div className="flex">
           <DarkModeToggle theme={theme} onClick={setTheme} />
         </div>
       </div>
 
-      <div className="md:flex hidden items-center justify-around md:gap-10 xl:gap-20">
-        {navLinks.map((link, index) => (
+      <div className="sm:flex hidden items-center justify-around sm:gap-10 xl:gap-20">
+        {navLinks.map((link) => (
           <li
             key={link.name}
-            className={`cursor-pointer font-hyperionBold text-lg transition-all hover:text-green-500 list-none ${
-              pathname === link.route ? "text-green-500" : ""
+            className={`cursor-pointer font-hyperionBold text-lg transition-all hover:text-blue list-none ${
+              pathname === link.route ? "text-blue" : ""
             }`}
           >
             <Link href={link.route}>{link.name}</Link>

@@ -21,4 +21,4 @@ export interface IProject {
   key_techs: string[];
 }
 
-export type Category = "frontend" | "backend" | "web 3" | "golang";
+export type Category = "frontend" | "backend" | "web 3" | "go";

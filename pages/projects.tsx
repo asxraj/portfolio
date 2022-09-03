@@ -26,7 +26,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="relative flex flex-col justify-center items-center">
       <ProjectsNavbar
         active={active}
         handleFilterCategory={handleFilterCategory}
@@ -41,7 +41,7 @@ const Projects = () => {
           <motion.div
             variants={fadeInUp}
             key={index}
-            className="col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-10"
+            className="col-span-12 sm:col-span-6 lg:col-span-4 2xl:col-span-3 mt-10"
           >
             <ProjectCard {...project} />
           </motion.div>

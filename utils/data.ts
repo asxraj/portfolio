@@ -8,7 +8,7 @@ export const categoryLinks: (Category | "all")[] = [
   "frontend",
   "backend",
   "web 3",
-  "golang",
+  "go",
 ];
 
 export const navLinks: InavLinks[] = [
@@ -21,8 +21,8 @@ export const navLinks: InavLinks[] = [
     name: "projects",
   },
   {
-    route: "/skills",
-    name: "skills",
+    route: "/resume",
+    name: "resume",
   },
 ];
 
@@ -85,78 +85,78 @@ export const tools: ISkill[] = [
 export const projects: IProject[] = [
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
     category: ["frontend"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS"],
   },
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
     category: ["frontend"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS"],
   },
 
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
     category: ["frontend"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS", "Solidity"],
   },
 
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
     category: ["frontend"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS", "Solidity"],
   },
 
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
-    category: ["frontend", "web 3", "golang"],
+    category: ["frontend", "web 3", "go"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS", "Solidity"],
   },
 
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
-    category: ["frontend", "web 3", "golang"],
+    category: ["frontend", "web 3", "go"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS", "Solidity"],
   },
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
     category: ["backend"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS"],
   },
   {
     name: "Sorting Visualizer",
-    image_path: "/assets/project.png",
+    image_path: "/assets/go.png",
     deployed_url: "",
     github_url: "https://github.com/sirajadam",
-    category: ["golang"],
+    category: ["go"],
     description: "This is a sorting visualizer",
-    key_techs: ["Golang", "TypeScript", "NextJS", "Solidity"],
+    key_techs: ["Go", "TypeScript", "NextJS"],
   },
 ];

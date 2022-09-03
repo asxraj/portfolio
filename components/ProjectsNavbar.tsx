@@ -16,10 +16,8 @@ const NavItem = ({
   return (
     <li
       onClick={() => handleFilterCategory(value)}
-      className={`sm:px-7 px-0 sm:py-3 py-0 rounded-full cursor-pointer transition-all duration-300 whitespace-nowrap ${
-        value === active
-          ? "sm:bg-green-500 text-green-500 sm:text-inherit  "
-          : ""
+      className={`sm:px-8 px-0 sm:py-3 py-0 rounded-full cursor-pointer transition-all duration-300 whitespace-nowrap  ${
+        value === active ? "sm:blue-gradient text-blue sm:text-inherit  " : ""
       }`}
     >
       {value}
