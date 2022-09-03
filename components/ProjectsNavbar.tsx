@@ -11,8 +11,6 @@ const NavItem = ({
   handleFilterCategory: Function;
   active: string;
 }) => {
-  console.log(value);
-
   return (
     <li
       onClick={() => handleFilterCategory(value)}

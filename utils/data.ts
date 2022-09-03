@@ -29,55 +29,55 @@ export const navLinks: InavLinks[] = [
 export const languages: ISkill[] = [
   {
     Icon: BsCircleFill,
-    name: "Python",
+    name: "Go",
     level: "85",
   },
   {
     Icon: BsCircleFill,
-    name: "JavaScript",
+    name: "TypeScript",
+    level: "75",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Solidity",
     level: "80",
   },
   {
     Icon: BsCircleFill,
-    name: "Go",
+    name: "Python",
+    level: "80",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Algorithms & dS",
     level: "80",
   },
   {
     Icon: BsCircleFill,
     name: "React",
-    level: "70",
-  },
-  {
-    Icon: BsCircleFill,
-    name: "TypeScript",
-    level: "70",
-  },
-  {
-    Icon: BsCircleFill,
-    name: "Tailwind",
-    level: "75",
+    level: "80",
   },
 ];
 
 export const tools: ISkill[] = [
   {
     Icon: BsCircleFill,
-    name: "Figma",
+    name: "Hardhat",
     level: "85",
   },
   {
     Icon: BsCircleFill,
-    name: "Photoshop",
+    name: "Figma",
     level: "45",
   },
   {
     Icon: BsCircleFill,
-    name: "Illustrator",
-    level: "60",
+    name: "Tailwind",
+    level: "80",
   },
   {
     Icon: BsCircleFill,
-    name: "Framer",
+    name: "Framer Motion",
     level: "45",
   },
 ];
