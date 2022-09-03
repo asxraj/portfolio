@@ -9,6 +9,28 @@ import { useRouter } from "next/router";
 
 import { navLinks } from "../utils/data";
 
+const DarkModeToggle = ({
+  theme,
+  onClick,
+}: {
+  theme: string | undefined;
+  onClick: Function;
+}) => {
+  return (
+    <div>
+      {theme === "dark" ? (
+        <button onClick={() => onClick("light")}>
+          <BsFillSunFill className="w-6 h-6 text-[#EFC942]" />
+        </button>
+      ) : (
+        <button onClick={() => onClick("dark")}>
+          <MdDarkMode className=" w-6 h-6 text-slate-800 " />
+        </button>
+      )}
+    </div>
+  );
+};
+
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
@@ -27,7 +49,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="md:hidden flex cursor-pointer">
+      <div className="md:hidden flex flex-row-reverse gap-4 items-center cursor-pointer">
         <div className="w-7 h-7" onClick={() => setToggle((prev) => !prev)}>
           {toggle ? (
             <AiOutlineClose className="w-6 h-6" />
@@ -39,7 +61,7 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } flex-col bg-gray-500 p-6 rounded-xl absolute top-20 right-0 mx-4 min-w-[140px] sidebar`}
+          } flex-col bg-gray-300 p-6 rounded-xl absolute top-20 right-0 mx-4 min-w-[140px] sidebar dark:bg-gray-500`}
         >
           <ul className="">
             {navLinks.map((link, index) => (
@@ -47,13 +69,16 @@ const Navbar = () => {
                 key={link.name}
                 className={`cursor-pointer font-hyperionBold text-sm transition-all hover:text-green-500 list-none ${
                   pathname === link.route ? "text-green-500" : ""
-                } ${index !== navLinks.length - 1 ? "mb-4" : ""}`}
+                } mb-4 }`}
                 onClick={() => setToggle((prev) => !prev)}
               >
                 <Link href={link.route}>{link.name}</Link>
               </li>
             ))}
           </ul>
+        </div>
+        <div className="flex ">
+          <DarkModeToggle theme={theme} onClick={setTheme} />
         </div>
       </div>
 
@@ -70,27 +95,9 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* {theme === "dark" ? (
-        <button
-          className=""
-          onClick={() => {
-            setTheme("light");
-          }}
-        >
-          <BsFillSunFill className="w-7 h-7 text-[#EFC942]" />
-        </button>
-      ) : (
-        <div>
-          <button
-            className="mt-1"
-            onClick={() => {
-              setTheme("dark");
-            }}
-          >
-            <MdDarkMode className=" w-7 h-7 text-slate-800" />
-          </button>
-        </div>
-      )} */}
+      <div className="hidden sm:flex">
+        <DarkModeToggle theme={theme} onClick={setTheme} />
+      </div>
     </nav>
   );
 };
