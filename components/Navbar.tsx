@@ -20,11 +20,11 @@ const DarkModeToggle = ({
     <div>
       {theme === "dark" ? (
         <button onClick={() => onClick("light")}>
-          <BsFillSunFill className="w-6 h-6 text-[#EFC942]" />
+          <MdDarkMode className=" w-6 h-6 text-indigo-500 " />
         </button>
       ) : (
         <button onClick={() => onClick("dark")}>
-          <MdDarkMode className=" w-6 h-6 text-indigo-500 " />
+          <BsFillSunFill className="w-6 h-6 text-[#EFC942]" />
         </button>
       )}
     </div>

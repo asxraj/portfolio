@@ -35,6 +35,8 @@ const ProjectCard = (props: IProject) => {
           <a
             href={props.deployed_url}
             className="flex items-center gap-2 md:px-3 lg:px-2 xl:px-3 px-3 md:py-2 py-2 blue-gradient rounded-lg cursor-pointer"
+            target="_blank"
+            rel="noreferrer"
           >
             <BsGlobe />
             Demo

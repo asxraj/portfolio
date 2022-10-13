@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Portfolio website of Adam Siraj" />
       </Head>
       <body className="font-hyperionBold bg-gray-200 dark:bg-slate-800 dark:text-white">
         <Main />

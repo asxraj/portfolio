@@ -2,21 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { languages, tools } from "../utils/data";
 import { ISkill } from "../utils/types";
-
-{
-  /* <div className="text-white my-2 dark:bg-dark-200 bg-gray-300 rounded-full">
-  <motion.div
-    className="px-4 py-1 flex items-center rounded-full bg-gradient-to-r from-green to-blue-600"
-    style={{ width: bar_width }}
-    variants={variants}
-    initial="initial"
-    animate="animate"
-  >
-    <Icon className="mr-3" />
-    {name}
-  </motion.div>
-</div>; */
-}
+import Head from "next/head";
 
 const Bar = ({ data }: { data: ISkill }) => {
   const bar_width = `${data.level}%`;
@@ -45,7 +31,7 @@ const Bar = ({ data }: { data: ISkill }) => {
         animate="animate"
         style={{ width: `${bar_width}` }}
       >
-        <data.Icon className="" />
+        <data.Icon />
         {data.name}
       </motion.div>
     </div>
@@ -55,6 +41,10 @@ const Bar = ({ data }: { data: ISkill }) => {
 const Resume = () => {
   return (
     <div className="flex flex-col justify-center sm:p-12 p-6">
+      <Head>
+        <title>Adam | Software Engineer </title>
+        <meta name="description" content="Portfolio website of Adam Siraj" />
+      </Head>
       <div className="flex-col xl:flex-row flex justify-start gap-6 ">
         <div className="font-poppins flex flex-col text-2xl flex-1 space-y-4">
           <h1 className="font-hyperionBold">Education</h1>
@@ -67,7 +57,7 @@ const Resume = () => {
         </div>
         <div className="font-poppins flex flex-col text-2xl flex-1 space-y-4">
           <h1 className="font-hyperionBold">Work</h1>
-          <p className="font-poppins">Blockchain Deveoper (Since 2021 Nov )</p>
+          <p className="font-poppins">Blockchain Deveoper (2021- ) </p>
           <p className="text-sm">
             Developed and audited smart contracts for different projects mainly
             on the Ethereum Blockchain using Solidity and Hardhat.

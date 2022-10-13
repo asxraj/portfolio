@@ -6,6 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 
 import { motion } from "framer-motion";
 import { fadeInUp, stagger } from "../utils/animations";
+import Head from "next/head";
 
 const Projects = () => {
   const [projects, setProjects] = useState<IProject[]>(projectData);
@@ -27,6 +28,10 @@ const Projects = () => {
 
   return (
     <div className="relative flex flex-col justify-center items-center">
+      <Head>
+        <title>Adam | Software Engineer </title>
+        <meta name="description" content="Portfolio website of Adam Siraj" />
+      </Head>
       <ProjectsNavbar
         active={active}
         handleFilterCategory={handleFilterCategory}
