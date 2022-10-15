@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-12 font-poppins">
         <div className="text-3xl font-semibold xl:text-4xl w">
-          Hey, I'm Adam <br />I love working with <br />
+          {"Hey, I'm Adam"} <br />I love working with <br />
           <span className="text-blue font-hyperionBold">
             <Typewriter
               options={{
